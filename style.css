@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden; /* Cambiar de 'auto' a 'hidden' para evitar barras de desplazamiento */
+  }
+  
+  #game-area {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #ddd;
+    border: 2px solid #333;
+    overflow: hidden;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+#player,
+#target {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+#target {
+    background-color: #ff4136;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    text-align: center;
+}
+
+.caught {
+    animation: caughtAnimation 0.3s ease-out;
+}
+
+@keyframes caughtAnimation {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
